@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Joshua Javellana | Executive Assistant & Operations Partner</title>
+    <!-- Refined editorial typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Restrained graphite palette */
+        :root {
+            --bg: #f2f2ef;
+            --surface: #e7e7e3;
+            --card-bg: #fafaf8;
+            --text-primary: #171717;
+            --text-secondary: #626262;
+            --border-dark: #2c2c2c;
+            --border-muted: #c9c9c4;
+            --accent: #202020;
+            --accent-hover: #3b3b3b;
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --max-width: 1040px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Prevent horizontal overflow issues on mobile screens */
+        html, body {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            background-color: var(--bg);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout Structure */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* Graphite navigation bar */
+        header {
+            background-color: rgba(28, 28, 28, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #444444;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #f7f7f4;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+        }
+
+        nav ul a {
+            color: #bdbdb9;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        nav ul a:hover {
+            color: #ffffff;
+        }
+
+        /* Editorial hero */
+        .hero {
+            padding: 7rem 0;
+            border-bottom: 1px solid var(--border-muted);
+            background: linear-gradient(135deg, #f7f7f4 0%, var(--bg) 62%, #ddddda 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 6vw, 5.25rem);
+            font-weight: 600;
+            letter-spacing: -0.045em;
+            line-height: 0.98;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+        }
+
+        /* Framed Hero Image with Solid Black Border */
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--border-dark);
+            box-shadow: 14px 14px 0 var(--surface);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(10%);
+            transition: var(--transition);
+        }
+
+        .hero-image-container:hover .hero-image {
+            transform: scale(1.02);
+        }
+
+        /* Solid Outlined Contact Pills */
+        .contact-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .pill {
+            background-color: rgba(250, 250, 248, 0.7);
+            border: 1px solid var(--border-muted);
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: none;
+        }
+
+        /* Strategic Manifesto Block */
+        .manifesto {
+            background-color: var(--card-bg);
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-muted);
+            text-align: center;
+        }
+
+        .manifesto-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+            font-style: italic;
+            line-height: 1.3;
+            max-width: 850px;
+            margin: 0 auto;
+            color: var(--text-primary);
+        }
+
+        /* Section Global Settings & Navigation Offsets */
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border-muted);
+            scroll-margin-top: 80px; /* Offset to prevent sticky header overlap */
+        }
+
+        #pillars,
+        #design,
+        #skills {
+            background-color: var(--surface);
+        }
+
+        #featured,
+        #cases,
+        #contact {
+            background-color: var(--card-bg);
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: block;
+            position: relative;
+            padding-left: 2.75rem;
+        }
+
+        .section-tag::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 2rem;
+            height: 1px;
+            background-color: var(--border-dark);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.75rem);
+            font-weight: 600;
+            letter-spacing: -0.035em;
+            line-height: 1;
+        }
+
+        /* Asymmetric monochrome service grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Safer min-width for small devices */
+            border-top: 1px solid var(--border-dark);
+            border-left: 1px solid var(--border-dark);
+        }
+
+        .pillar-card {
+            background-color: var(--card-bg);
+            border-right: 1px solid var(--border-dark);
+            border-bottom: 1px solid var(--border-dark);
+            padding: 3.5rem 2.5rem;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            background-color: #ffffff;
+        }
+
+        .pillar-card:nth-child(2) {
+            background-color: var(--accent);
+            color: #f7f7f4;
+        }
+
+        .pillar-card:nth-child(2) .icon-container {
+            background-color: #343434;
+            border-color: #777773;
+        }
+
+        .pillar-card:nth-child(2) .icon-container svg {
+            stroke: #f7f7f4;
+        }
+
+        .pillar-card:nth-child(2) li {
+            color: #c7c7c2;
+        }
+
+        .pillar-card:nth-child(2) li::before {
+            color: #ffffff;
+        }
+
+        .pillar-card:nth-child(2):hover {
+            background-color: var(--accent-hover);
+        }
+
+        .icon-container {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-container svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+            stroke: var(--text-primary);
+            fill: none;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        .pillar-card ul {
+            list-style: none;
+        }
+
+        .pillar-card li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.85rem;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .pillar-card li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+
+        /* Deep-Dive Case Study Layout (Balanced & Centered) */
+        .featured-hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 4.5rem;
+            align-items: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .featured-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .featured-content p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .featured-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 2rem;
+        }
+
+        .spec-item h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Global Uniform Visual Frame Style */
+        .gallery-frame {
+            border: 1px solid var(--border-dark);
+            background-color: #ffffff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 12px 12px 0 var(--surface);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .gallery-frame:hover {
+            transform: translateY(-3px);
+            box-shadow: 16px 16px 0 var(--surface);
+        }
+
+        .gallery-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            filter: grayscale(10%);
+            transition: var(--transition);
+        }
+
+        .gallery-frame:hover img {
+            filter: grayscale(0%);
+        }
+
+        .gallery-caption {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-dark);
+            padding: 1rem 1.25rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .featured-hero-grid .gallery-frame {
+            max-width: 480px;
+            justify-self: end; /* Keeps primary frame right-aligned */
+        }
+
+        /* Center-aligned secondary visual stack */
+        .featured-gallery-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            align-items: center; /* Symmetrically centers all subsequent images */
+            border-top: 1px solid var(--border-muted);
+            padding-top: 4.5rem;
+            margin-top: 1rem;
+        }
+
+        .featured-gallery-stack .gallery-frame {
+            max-width: 480px; /* Aligned to match the primary visual precisely */
+        }
+
+        /* Editorial case studies */
+        .case-studies {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .case-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            padding: 3rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-muted);
+            border-left: 4px solid var(--border-dark);
+            border-radius: 2px;
+            box-shadow: 0 14px 35px rgba(23, 23, 23, 0.05);
+            transition: var(--transition);
+        }
+
+        .case-item:hover {
+            transform: translateY(-3px);
+            border-color: #a4a4a0;
+            box-shadow: 0 20px 45px rgba(23, 23, 23, 0.09);
+        }
+
+        .case-meta h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-meta span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .case-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .case-block h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-dark);
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        .case-block p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Advanced Asymmetric Editorial Masonry Collage - (Fit-to-box logic, NO cropping) */
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: dense;
+            gap: 1.5rem;
+            border-top: 1px solid var(--border-dark);
+            padding-top: 3rem;
+        }
+
+        .collage-item {
+            position: relative;
+            background-color: #ffffff; /* Clean white canvas background */
+            border: 1px solid var(--border-dark);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 8px 8px 0 rgba(44, 44, 44, 0.06);
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1; /* Forces exact square container logic, zero spacing discrepancies */
+        }
+
+        .collage-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 14px 14px 0 rgba(44, 44, 44, 0.12);
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Since assets are 1:1, cover expands them perfectly with zero cropping */
+            filter: grayscale(10%);
+            transition: var(--transition);
+        }
+
+        .collage-item:hover img {
+            transform: scale(1.02);
+            filter: grayscale(0%);
+        }
+
+        /* Subtle slide-up tags on hover */
+        .collage-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(28, 28, 28, 0.96);
+            color: #f7f7f4;
+            padding: 0.75rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transform: translateY(100%);
+            transition: var(--transition);
+            border-top: 1px solid #444444;
+        }
+
+        .collage-item:hover .collage-overlay {
+            transform: translateY(0);
+        }
+
+        /* Asymmetric Masonry Rules based on actual 1:1 and 2.75:1 ratios */
+        .collage-item.standard {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .collage-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Banner matching 1000x364 horizontal ratios cleanly */
+        .collage-item.banner {
+            grid-column: 1 / -1;
+            aspect-ratio: 1000 / 364; 
+        }
+
+        /* Organized System Categories Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .skill-group h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            border-bottom: 1.5px solid var(--border-dark);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-group ul {
+            list-style: none;
+        }
+
+        .skill-group li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        /* Quiet graphite skill tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 2rem;
+        }
+
+        .skill-tag {
+            background-color: #f5f5f2;
+            border: 1px solid #b5b5b0;
+            padding: 0.6rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            box-shadow: none;
+            transition: var(--transition);
+        }
+
+        .skill-tag:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Education & Credentials layout */
+        .credentials-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+        }
+
+        .credential-item {
+            margin-bottom: 2rem;
+        }
+
+        .credential-item h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .credential-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Two-Column Clean Contact Section with Profile Photo */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .contact-flex {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Circle Headshot Frame with Dark Outline */
+        .profile-photo-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--border-dark);
+            flex-shrink: 0;
+            background-color: var(--border-muted);
+            box-shadow: 0 0 0 7px var(--surface);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: none; 
+        }
+
+        /* Minimal graphite call to action */
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 0.9rem 2rem;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border-dark);
+            box-shadow: none;
+            transition: var(--transition);
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Soft grey reference cards */
+        .ref-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 2px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: none;
+        }
+
+        .ref-card p {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .ref-card span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .ref-card a {
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: block;
+            margin-top: 0.5rem;
+            text-decoration: underline;
+        }
+
+        /* Dark closing band */
+        footer {
+            background-color: #1c1c1c;
+            border-top: 1px solid #3e3e3e;
+            padding: 4rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #adada8;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 991px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-image-container {
+                height: 350px;
+            }
+            .credentials-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .featured-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .featured-gallery-stack {
+                border-top: none;
+                padding-top: 1.5rem;
+            }
+            .collage-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .collage-item.large, .collage-item.banner, .collage-item.wide {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                position: sticky;
+                top: 0;
+                background-color: rgba(28, 28, 28, 0.98);
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 1rem 0;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem 1.25rem; /* Prevents text overflow on small viewports */
+            }
+            nav ul a {
+                font-size: 0.8rem;
+            }
+            section {
+                padding: 4rem 0; /* Compact mobile padding */
+                scroll-margin-top: 120px; /* Aligns header targeting offset cleanly */
+            }
+            .hero {
+                padding: 4rem 0 3rem 0;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 3rem); /* Safe rendering dimensions */
+                line-height: 1.1;
+                margin-bottom: 1.25rem;
+            }
+            .hero h2 {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+            .hero-image-container {
+                height: 320px;
+            }
+            .case-item {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            .case-content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .contact-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            .collage-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .collage-item.large, .collage-item.banner, .collage-item.wide, .collage-item.tall, .collage-item.standard {
+                grid-column: span 1;
+                grid-row: span 1;
+                aspect-ratio: 1 / 1;
+            }
+            .collage-item.banner {
+                aspect-ratio: 1000 / 364;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sleek Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">A. J. Javellana</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pillars">Pillars</a></li>
+                    <li><a href="#featured">Featured Case</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Professional Hero Area -->
+    <section id="about" class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>Adrian Joshua Javellana</h1>
+                <h2>Executive Assistant & Operations Partner</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7;">
+                    I act as an operational right hand to C-level leaders. Specializing in administrative logistics, internal operations systems, and tracking key organizational analytics, I ensure high-level business vision runs cleanly in day-to-day execution.
+                </p>
+                <div class="contact-pills">
+                    <span class="pill">
+                        <!-- Map Pin SVG -->
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Davao City, PH
+                    </span>
+                    <span class="pill">
+                        <!-- Mail SVG -->
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        ajgjavellana@gmail.com
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Sleek Workspace Image with Solid Black Border Frame -->
+            <div class="hero-image-container">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1000" alt="Minimalist executive workspace representing organized administrative support.">
+            </div>
+        </div>
+    </section>
+
+    <!-- Typographic Philosophy manifesto -->
+    <section class="manifesto">
+        <div class="container">
+            <p class="manifesto-text">
+                "I am not an assistant who needs to be spoon-fed; I am a strategic partner who clears the path for leaders to focus on what matters most."
+            </p>
+        </div>
+    </section>
+
+    <!-- Operational Pillars with Connected Black Grid -->
+    <section id="pillars">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Value Proposition</span>
+                <h2 class="section-title">Core Service Pillars</h2>
+            </div>
+            
+            <div class="pillars-grid">
+                <!-- Card 1 -->
+                <div class="pillar-card">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    </div>
+                    <h3>Executive Support & Finance</h3>
+                    <ul>
+                        <li>Synchronizing complex calendars, travel, and logistics for CFOs and CEOs.</li>
+                        <li>Coordinating logistics and material preparation for high-level board meetings.</li>
+                        <li>Structuring financial and data workflows utilizing Sage and Omnidek.</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="pillar-card">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    </div>
+                    <h3>Systems Administration & Co-Dev</h3>
+                    <ul>
+                        <li>Developing, updating, and actively testing features for proprietary in-house CRMs.</li>
+                        <li>Safeguarding database integrity across SAP Business One, Pipedrive, and cloud hubs.</li>
+                        <li>Overseeing risk management, compliance documentation (COIs, W9s), and vendor portals.</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="pillar-card">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3>Operations & HR Pipelines</h3>
+                    <ul>
+                        <li>Rapidly scaling distributed renewable energy teams via end-to-end talent strategies.</li>
+                        <li>Implementing data-driven tracking for onboarding metrics and post-hire performance.</li>
+                        <li>Structuring secure compliance systems for employee backgrounds, credentials, and legal records.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep-Dive Premium Case Study Segment -->
+    <section id="featured">
+        <div class="container">
+            <!-- Top Row: Text & Main WordPress Banner side-by-side -->
+            <div class="featured-hero-grid">
+                <div class="featured-content">
+                    <span class="section-tag">Featured Case Study</span>
+                    <h3>Parenting Decolonized: E-Commerce & Brand Engineering</h3>
+                    <p>
+                        A comprehensive operational engagement transforming a WordPress podcast portal into a fully integrated digital ecosystem. I managed the full lifecycle: designing web banners, implementing podcast directory feeds with immediate quicklinks, structuring Shopify storefront collections, creating apparel and product mockups, and launching automated email campaigns to monetize the active subscriber base.
+                    </p>
+                    <div class="featured-specs">
+                        <div class="spec-item">
+                            <h4>Platform CMS</h4>
+                            <p>WordPress & Shopify</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>E-commerce Strategy</h4>
+                            <p>Collection curation & mockups</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Engagement Tech</h4>
+                            <p>Klaviyo & Mailchimp</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Asset Deliverables</h4>
+                            <p>Store banners, GIFs, & apparel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Website Banner Asset (First Visual) -->
+                <div class="gallery-frame">
+                    <img src="assets/parenting-decolonized-banner.png" alt="Wordpress banner and podcast quicklink layouts.">
+                    <div class="gallery-caption">WordPress Banner & Directory Interface</div>
+                </div>
+            </div>
+
+            <!-- Vertically Stacked & Centered Secondary Assets (Identical sizes to primary) -->
+            <div class="featured-gallery-stack">
+                <!-- Frame 2: Collections -->
+                <div class="gallery-frame">
+                    <img src="assets/parenting-decolonized-shopify.png" alt="Shopify collections and product alignment structure.">
+                    <div class="gallery-caption">Shopify Site Collections</div>
+                </div>
+                <!-- Frame 3: Product Mockups -->
+                <div class="gallery-frame">
+                    <img src="assets/parenting-decolonized-products.png" alt="Selected apparel product layouts.">
+                    <div class="gallery-caption">Product & Mockup Designs</div>
+                </div>
+                <!-- Frame 4: Email Campaign -->
+                <div class="gallery-frame">
+                    <img src="assets/parenting-decolonized-email.png" alt="Email launch graphics and GIF elements.">
+                    <div class="gallery-caption">Launch & Email Campaigns</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Projects inside Outlined Blocks -->
+    <section id="cases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Case Studies</span>
+                <h2 class="section-title">Selected Achievements</h2>
+            </div>
+            
+            <div class="case-studies">
+                <!-- Case Study 1 -->
+                <div class="case-item">
+                    <div class="case-meta">
+                        <span>Felix Media Solutions</span>
+                        <h3>Customer Success & System Administration</h3>
+                    </div>
+                    <div class="case-content-grid">
+                        <div class="case-block">
+                            <h4>The Challenge</h4>
+                            <p>Resolving massive lists of outstanding insurance (COIs) and client compliance items without interrupting daily client ticketing operations.</p>
+                        </div>
+                        <div class="case-block">
+                            <h4>The Action</h4>
+                            <p>Consolidated raw document details into a central service level master-sheet, updated Pipedrive CRM, and completed submissions for platforms like Avetta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-item">
+                    <div class="case-meta">
+                        <span>SunLife Solar</span>
+                        <h3>Performance Coaching & Executive Decision-Making</h3>
+                    </div>
+                    <div class="case-content-grid">
+                        <div class="case-block">
+                            <h4>The Challenge</h4>
+                            <p>Supporting high-level solar executive leadership with complex data metrics, travel plans, and team productivity coaching.</p>
+                        </div>
+                        <div class="case-block">
+                            <h4>The Action</h4>
+                            <p>Developed data-driven recommendations on workforce trends, facilitated bi-weekly "game-plan" meetings, and coordinated corporate board schedules.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="case-item">
+                    <div class="case-meta">
+                        <span>Sunsource Power LLC</span>
+                        <h3>Rapid Recruitment & Compliance Pipeline</h3>
+                    </div>
+                    <div class="case-content-grid">
+                        <div class="case-block">
+                            <h4>The Challenge</h4>
+                            <p>Sourcing and rapidly onboarding highly specialized solar installers, site surveyors, and design engineers under tight project timelines.</p>
+                        </div>
+                        <div class="case-block">
+                            <h4>The Action</h4>
+                            <p>Managed full recruitment lifecycle through modern ATS pipelines, coordinated pre-employment screenings, and ensured legal hiring compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand and Graphic Design Editorial Masonry Collage -->
+    <section id="design">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visual Assets & Brand Support</span>
+                <h2 class="section-title">Creative Assets & Design</h2>
+            </div>
+            
+            <div class="collage-grid">
+                <!-- Large Item 1: Presentation Board concept -->
+                <div class="collage-item large">
+                    <img src="assets/solar-presentation.png" alt="Clean classroom presentation outline board.">
+                    <div class="collage-overlay">Presentation & Info Board Graphics</div>
+                </div>
+
+                <!-- Tall Item 2: Typography/Flyer asset -->
+                <div class="collage-item standard">
+                    <img src="assets/always-good-day.png" alt="Typography layout - It's always a good day for solar.">
+                    <div class="collage-overlay">Visual Typography & Marketing Assets</div>
+                </div>
+
+                <!-- Standard Item 3: Earth solar umbrella -->
+                <div class="collage-item standard">
+                    <img src="assets/solar-umbrella.png" alt="Illustration of Earth holding solar panel umbrella.">
+                    <div class="collage-overlay">Environmental Illustrations</div>
+                </div>
+
+                <!-- Standard Item 4: Hands Earth -->
+                <div class="collage-item standard">
+                    <img src="assets/hands-earth.png" alt="Graphic of hands holding and protecting Earth.">
+                    <div class="collage-overlay">Social Impact Collateral</div>
+                </div>
+
+                <!-- Standard Item 5: Sun skateboard vector -->
+                <div class="collage-item standard">
+                    <img src="assets/sun-skateboard.png" alt="Cool sun mascot riding skateboard.">
+                    <div class="collage-overlay">Mascot & Character Assets</div>
+                </div>
+
+                <!-- Standard Item 6: Sun king throne vector -->
+                <div class="collage-item standard">
+                    <img src="assets/sun-king.png" alt="Crown sun mascot on a palace throne.">
+                    <div class="collage-overlay">Thematic Vector Design</div>
+                </div>
+
+                <!-- Tall Item 7: Hydrate animated GIF -->
+                <div class="collage-item standard">
+                    <img src="assets/hydrate.gif" alt="Animated don't forget to hydrate gif.">
+                    <div class="collage-overlay">Digital Animation Loops</div>
+                </div>
+
+                <!-- Large Item 8: Sun basketball animated GIF -->
+                <div class="collage-item standard">
+                    <img src="assets/basketball-sun.gif" alt="Animated sun dunking basketball.">
+                    <div class="collage-overlay">Interactive & Graphic GIFs</div>
+                </div>
+
+                <!-- Standard Item 9: Wolves howling at full moon -->
+                <div class="collage-item standard">
+                    <img src="assets/wolves-moon.png" alt="Illustration of wolves howling under full moon.">
+                    <div class="collage-overlay">Narrative Illustration</div>
+                </div>
+
+                <!-- Standard Item 10: Trojan horse graphic -->
+                <div class="collage-item standard">
+                    <img src="assets/trojan-horse.png" alt="Graphic of Trojan horse and sun warrior.">
+                    <div class="collage-overlay">Storytelling Graphics</div>
+                </div>
+
+                <!-- Wide Item 11: House solar cycle animated GIF -->
+                <div class="collage-item standard">
+                    <img src="assets/solar-house-cycle.gif" alt="Animated sun rising over a solar house.">
+                    <div class="collage-overlay">Animated Solar Architecture Loop</div>
+                </div>
+
+                <!-- Full Width Banner Item 12: Horizontal three-houses animated GIF -->
+                <div class="collage-item banner">
+                    <img src="assets/three-houses-banner.gif" alt="Sliding horizontal banner of solar homes.">
+                    <div class="collage-overlay">E-commerce sliding landing banners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Categorized System Competencies Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Systems & Competencies</span>
+                <h2 class="section-title">Software & System Capabilities</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Group 1 -->
+                <div class="skill-group">
+                    <h3>CRM & Systems</h3>
+                    <ul>
+                        <li>SAP Business One</li>
+                        <li>Pipedrive CRM</li>
+                        <li>Sage ERP</li>
+                        <li>Omnidek</li>
+                        <li>Google Admin Console</li>
+                    </ul>
+                </div>
+                <!-- Group 2 -->
+                <div class="skill-group">
+                    <h3>HR & Operations</h3>
+                    <ul>
+                        <li>Applicant Tracking Systems (ATS)</li>
+                        <li>Full-Cycle Recruitment</li>
+                        <li>Performance Analytics (KPI)</li>
+                        <li>Onboarding Compliance</li>
+                        <li>Avetta & MyCOIOnline</li>
+                    </ul>
+                </div>
+                <!-- Group 3 -->
+                <div class="skill-group">
+                    <h3>Web, Marketing & Design</h3>
+                    <ul>
+                        <li>Shopify E-Commerce</li>
+                        <li>Graphic Design & Collateral</li>
+                        <li>Basic Web Design (HTML5/CSS3)</li>
+                        <li>Bootstrap Framework</li>
+                        <li>Email Automation & Flows</li>
+                    </ul>
+                </div>
+                <!-- Group 4 -->
+                <div class="skill-group">
+                    <h3>Analytics & Admin</h3>
+                    <ul>
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>IBM SPSS Statistics</li>
+                        <li>Travel Coordination & Logistics</li>
+                        <li>Calendar Management</li>
+                        <li>Board Material Preparation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Tag Cloud -->
+            <div class="skills-container">
+                <span class="skill-tag">Systems Testing</span>
+                <span class="skill-tag">CRM Feature Design</span>
+                <span class="skill-tag">Database Hygiene</span>
+                <span class="skill-tag">Vendor Risk Compliance</span>
+                <span class="skill-tag">Executive Board Reporting</span>
+                <span class="skill-tag">Graphic Design & Assets</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Education & Certifications Section -->
+    <section id="credentials" style="background-color: var(--surface); border-bottom: 1px solid var(--border-muted); padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Education & Certifications</h2>
+            </div>
+            
+            <div class="credentials-layout">
+                <div>
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 2rem; font-weight: 600;">Formal Education</h2>
+                    <div class="credential-item">
+                        <h3>Bachelor of Science in Business Management</h3>
+                        <p>Ateneo de Davao University | June 2013 - March 2019</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 2rem; font-weight: 600;">Professional Licenses</h2>
+                    <div class="credential-item">
+                        <h3>Basic Web Development Crash Course</h3>
+                        <p>Zuitt Open House | HTML, CSS & Bootstrap Framework</p>
+                    </div>
+                    <div class="credential-item">
+                        <h3>Microsoft Excel - Basic and Advanced</h3>
+                        <p>Freelancers Training Depot | Advanced Certified</p>
+                    </div>
+                    <div class="credential-item">
+                        <h3>SAP Business One Certified</h3>
+                        <p>Ateneo de Davao University & Fasttrack IT Academy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Contact Section with Outlined Cards -->
+    <section id="contact" style="border-bottom: none;">
+        <div class="container contact-layout">
+            <div class="contact-lead">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <span class="section-tag">Next Steps</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                
+                <div class="contact-flex">
+                    <!-- Headshot Frame with Solid Black Border Outline and updated Google Drive link -->
+                    <div class="profile-photo-container">
+                        <img class="profile-photo" src="https://lh3.googleusercontent.com/d/1TIzZNE40hpz1xU283aeSgLZ7Od1oi_Ma" alt="Adrian Joshua Javellana portrait.">
+                    </div>
+                    <p>I am available to discuss permanent, contract, or advisory opportunities where my operations and administrative skillsets can add immediate value to your leadership team.</p>
+                </div>
+                
+                <a href="mailto:ajgjavellana@gmail.com" class="contact-btn">Initiate Discussion</a>
+            </div>
+            
+            <div>
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.01em;">Verified References</h3>
+                
+                <!-- Ref 1 -->
+                <div class="ref-card">
+                    <p>Honna M. Caro</p>
+                    <span>Chief of Staff – Sunlifenow LLC</span>
+                    <a href="mailto:honna.caro@sunlifenow.com">honna.caro@sunlifenow.com</a>
+                </div>
+
+                <!-- Ref 2 -->
+                <div class="ref-card" style="margin-bottom: 0;">
+                    <p>Shiella Mae D. Sajol, CPA</p>
+                    <span>Data Security Privacy Consultant – IBM</span>
+                    <a href="mailto:shiella.g.dinopol@gmail.com">shiella.g.dinopol@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Adrian Joshua Javellana. Prepared and structured with professional standards.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
